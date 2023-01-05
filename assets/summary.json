@@ -1,0 +1,53 @@
+{
+  "name": "Aleksandr Kolontai",
+  "position": "Front-end developer",
+  "contacts": {
+    "phone": "(+380) 63-995-83-38",
+    "mail": "kav993@gmail.com"
+  },
+  "about": "Self taught programmer. Mainly frontend. At the moment working on transition to ML Engineer.",
+  "skills": ["JavaScript", "GIT", "HTML/CSS"],
+  "links": [
+    ["GitHub:", "https://github.com/JollyR0ger42"],
+    ["Linkedin:", "https://www.linkedin.com/in/aleksandr-kolontai-a7437718b/"]
+  ],
+  "languages": ["Ukrainian/Russian (fluent)", "English (B2)"],
+  "educations": [
+    {
+      "institution": "Kyiv Polytechnic National University",
+      "degree": "M. Sc. in Electrical Engineering",
+      "years": "2010 - 2016",
+      "department": "Electric Power, Engineering and Automatics"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Brighta",
+      "role": "Junior Front-end developer",
+      "time": "August 2020 - January 2021",
+      "decription": "Developing new online-educational platform ojowo.com",
+      "techstack": ["Vue", "Blades(Laravel)"]
+    },
+    {
+      "company": "Code&Care",
+      "role": "Senior Front-end developer",
+      "time": "February 2021 - October 2021",
+      "decription": "Developing new banking app for loans automatisation",
+      "techstack": ["Vue / Quasar", "NodeJS / GraphQL"]
+    },
+    {
+      "company": "<hidden by NDA>",
+      "role": "Front-end developer",
+      "time": "November 2021 - August 2022",
+      "decription": "Developing new modules for governance web portal",
+      "techstack": ["Vue / Nuxt"]
+    },
+    {
+      "company": "HZF",
+      "role": "Front-end developer",
+      "time": "September 2022 - October 2022",
+      "decription": "Reskin for Dice app (casino)",
+      "techstack": ["PhaserJS", "NodeJS"]
+    }
+  ]
+}

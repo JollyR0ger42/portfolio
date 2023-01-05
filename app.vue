@@ -1,10 +1,14 @@
 <template>
   <div class="app__wrapper">
     <div class="app__container">
-      Yo00000000000000000000000000000000000000ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss000000
+      {{summary}}
     </div>
   </div>
 </template>
+
+<script setup>
+import summary from '~/assets/summary.json'
+</script>
 
 <style lang="scss">
 .app {
