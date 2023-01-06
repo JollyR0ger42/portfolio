@@ -1,9 +1,16 @@
 <template>
+<div class="app">
   <div class="app__wrapper">
     <div class="app__container">
-      {{summary}}
+      <div class="app__container__left">
+        yo
+      </div>
+      <div class="app__container__right">
+        toto
+      </div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -12,21 +19,24 @@ import summary from '~/assets/summary.json'
 
 <style lang="scss">
 .app {
+  background-color: #044463;
+  min-height: 100vh;
+
   &__wrapper {
-    background-color: #044463;
-    width: 100vw;
-    height: 100vh;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-size: 16px;
   }
 
   &__container {
     color: #fff;
-    max-width: 800px;
     background-color: var(--dark-blue);
-    flex: 1;
     box-shadow: 0px 0px 10px #000;
+    width: 700px;
+    height: 990px;
   }
 }
 </style>
