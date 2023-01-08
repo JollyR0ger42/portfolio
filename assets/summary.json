@@ -7,10 +7,10 @@
   },
   "about": "Self taught programmer. Mainly frontend. At the moment working on transition to ML Engineer.",
   "skills": ["JavaScript", "GIT", "HTML/CSS"],
-  "links": [
-    ["GitHub:", "https://github.com/JollyR0ger42"],
-    ["Linkedin:", "https://www.linkedin.com/in/aleksandr-kolontai-a7437718b/"]
-  ],
+  "links": {
+    "github": "https://github.com/JollyR0ger42",
+    "linkedin": "https://www.linkedin.com/in/aleksandr-kolontai-a7437718b/"
+  },
   "languages": ["Ukrainian/Russian (fluent)", "English (B2)"],
   "educations": [
     {
@@ -48,6 +48,48 @@
       "time": "September 2022 - October 2022",
       "decription": "Reskin for Dice app (casino)",
       "techstack": ["PhaserJS", "NodeJS"]
+    }
+  ],
+  "pets": [
+    {
+      "title": "Conway's Game of Life",
+      "description": "react app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "Todo app",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "Crypto counter",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "Timer app",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "Asteroids",
+      "description": "js",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "Todo app",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "web page 1",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "title": "web page 2",
+      "description": "vue app",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
   ]
 }
