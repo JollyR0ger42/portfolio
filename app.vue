@@ -3,18 +3,22 @@
   <div class="app__wrapper">
     <div class="app__container">
       <div class="app__container__left">
+        <!-- NAME -->
         <h1 class="app__container__name">
           {{summary.name}}
         </h1>
-        <h3 class="app__container__name">
+        <!-- POSITION -->
+        <h3 class="app__container__position">
           {{summary.position}}
         </h3>
-        <div class="app__container__about">
-          <h4>About</h4>
+        <!-- ABOUT -->
+        <div class="app__container__about column">
+          <h3 class="app__subtitle">About</h3>
           <p>{{summary.about}}</p>
         </div>
-        <div class="app__container__contacts">
-          <h4>Contacts</h4>
+        <!-- CONTACTS -->
+        <div class="app__container__contacts column">
+          <h3 class="app__subtitle">Contacts</h3>
           <div>
             <span>Phone:</span>
             <span>{{summary.contacts.phone}}</span>
@@ -24,8 +28,9 @@
             <span>{{summary.contacts.mail}}</span>
           </div>
         </div>
-        <div class="app__container__skills">
-          <h4>Skills</h4>
+        <!-- SKILLS -->
+        <div class="app__container__skills column">
+          <h3 class="app__subtitle">Skills</h3>
           <p
             v-for="(skill, idx) in summary.skills"
             :key="idx"
@@ -33,8 +38,9 @@
             {{skill}}
           </p>
         </div>
-        <div class="app__container__languages">
-          <h4>Languages:</h4>
+        <!-- LANGUAGES -->
+        <div class="app__container__languages column">
+          <h3 class="app__subtitle">Languages</h3>
           <p
             v-for="(language, idx) in summary.languages"
             :key="idx"
@@ -42,21 +48,9 @@
             {{language}}
           </p>
         </div>
-        <div class="app__container__links">
-          <h4>Links</h4>
-          <div>
-            <span>Github:</span>
-            <span>{{summary.links.github}}</span>
-          </div>
-          <div>
-            <span>Linkedin:</span>
-            <span>{{summary.links.linkedin}}</span>
-          </div>
-        </div>
-      </div>
-      <div class="app__container__right">
-        <div class="app__container__educations">
-          <h4>Educations</h4>
+        <!-- EDUCATIONS -->
+        <div class="app__container__educations column">
+          <h3 class="app__subtitle">Educations</h3>
           <div
             v-for="(education, idx) in summary.educations"
             :key="idx"
@@ -80,8 +74,23 @@
             </div>
           </div>
         </div>
+        <!-- LINKS -->
+        <div class="app__container__links column">
+          <h3 class="app__subtitle">Links</h3>
+          <div>
+            <span>Github:</span>
+            <span>{{summary.links.github}}</span>
+          </div>
+          <div>
+            <span>Linkedin:</span>
+            <span>{{summary.links.linkedin}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="app__container__right">
         <div class="app__container__expirience__wrapper">
-          <h4>Expirience</h4>
+          <!-- EXPERIENCE -->
+          <h3 class="app__subtitle2">Experience</h3>
           <div
             v-for="(experience, idx) in summary.experience"
             :key="idx"
@@ -100,8 +109,8 @@
               <span>{{experience.time}}</span>
             </div>
             <div>
-              <span>decription:</span>
-              <span>{{experience.decription}}</span>
+              <span>description:</span>
+              <span>{{experience.description}}</span>
             </div>
             <div>
               <span>techstack:</span>
@@ -120,9 +129,35 @@ import summary from '~/assets/summary.json'
 </script>
 
 <style lang="scss">
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .app {
   background-color: #044463;
   min-height: 100vh;
+
+  &__subtitle {
+    color: #000;
+    border: 2px solid var(--yellow);
+    background-color: var(--yellow);
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle2 {
+    background-color: var(--orange);
+    padding: 5px;
+    margin: 0 -10px 5px;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
   &__wrapper {
     padding-top: 10px;
@@ -139,12 +174,18 @@ import summary from '~/assets/summary.json'
     height: 990px;
     display: flex;
 
-
+    &__links {
+      margin-top: auto;
+    }
 
     &__left {
       width: 33%;
       background-color: var(--dark-blue);
       color: #fff;
+
+      & > * {
+        margin-bottom: 15px;
+      }
     }
 
     &__right {

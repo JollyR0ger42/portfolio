@@ -5,7 +5,7 @@
     "phone": "(+380) 63-995-83-38",
     "mail": "kav993@gmail.com"
   },
-  "about": "Self taught programmer. Mainly frontend. At the moment working on transition to ML Engineer.",
+  "about": "Self-taught programmer. Mainly frontend. At the moment working on the transition to ML Engineer.",
   "skills": ["JavaScript", "GIT", "HTML/CSS"],
   "links": {
     "github": "https://github.com/JollyR0ger42",
@@ -25,28 +25,28 @@
       "company": "Brighta",
       "role": "Junior Front-end developer",
       "time": "August 2020 - January 2021",
-      "decription": "Developing new online-educational platform ojowo.com",
+      "description": "Developing new online-educational platform ojowo.com",
       "techstack": ["Vue", "Blades(Laravel)"]
     },
     {
       "company": "Code&Care",
       "role": "Senior Front-end developer",
       "time": "February 2021 - October 2021",
-      "decription": "Developing new banking app for loans automatisation",
+      "description": "Developing new banking app for loans automatization",
       "techstack": ["Vue / Quasar", "NodeJS / GraphQL"]
     },
     {
       "company": "<hidden by NDA>",
       "role": "Front-end developer",
       "time": "November 2021 - August 2022",
-      "decription": "Developing new modules for governance web portal",
+      "description": "Developing new modules for the governance web portal",
       "techstack": ["Vue / Nuxt"]
     },
     {
       "company": "HZF",
       "role": "Front-end developer",
       "time": "September 2022 - October 2022",
-      "decription": "Reskin for Dice app (casino)",
+      "description": "Reskin for Dice app (casino)",
       "techstack": ["PhaserJS", "NodeJS"]
     }
   ],
