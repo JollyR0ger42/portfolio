@@ -57,19 +57,19 @@
             class="app__container__education"
           >
             <div>
-              <span>institution:</span>
+              <span>School:</span>
               <span>{{education.institution}}</span>
             </div>
             <div>
-              <span>degree:</span>
+              <span>Grade:</span>
               <span>{{education.degree}}</span>
             </div>
             <div>
-              <span>years:</span>
+              <span>Calendar:</span>
               <span>{{education.years}}</span>
             </div>
             <div>
-              <span>department:</span>
+              <span>Apartment:</span>
               <span>{{education.department}}</span>
             </div>
           </div>
@@ -154,7 +154,7 @@ import summary from '~/assets/summary.json'
   &__subtitle2 {
     background-color: var(--orange);
     padding: 5px;
-    margin: 0 -10px 5px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -182,6 +182,7 @@ import summary from '~/assets/summary.json'
       width: 33%;
       background-color: var(--dark-blue);
       color: #fff;
+      padding: 10px;
 
       & > * {
         margin-bottom: 15px;
@@ -197,7 +198,6 @@ import summary from '~/assets/summary.json'
     &__right, &__left {
       display: flex;
       flex-direction: column;
-      padding: 10px;
     }
   }
 }
