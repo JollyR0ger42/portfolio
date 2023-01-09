@@ -17,16 +17,25 @@
       <!-- CONTACTS -->
       <div class="app__contacts column">
         <h3 class="app__subtitle">Contacts</h3>
-        <div>
+        <div class="app__contacts__phone">
           <img
             src="~/assets/call.svg"
-            class="app__call"
+            class="app__contacts__icon"
           >
-          <span>{{summary.contacts.phone}}</span>
+          <a
+            class="app__contacts__phone__number"
+            :href="'tel:' + summary.contacts.phone"
+          >{{summary.contacts.phone}}</a>
         </div>
-        <div>
-          <span>Email:</span>
-          <span>{{summary.contacts.mail}}</span>
+        <div class="app__contacts__email">
+          <img
+            src="~/assets/mail.svg"
+            class="app__contacts__icon"
+          >
+          <a
+            class="app__contacts__phone__number"
+            :href="'mailto:' + summary.contacts.mail"
+          >{{summary.contacts.mail}}</a>
         </div>
       </div>
       <!-- SKILLS -->
@@ -119,11 +128,30 @@ import summary from "~/assets/summary.json";
   box-shadow: 0px 0px 10px #000;
   width: 700px;
 
-  &__call {
-    width: 28px;
-    height: 28px;
-    background-color: #fff;
-    margin-left: -10px;
+  &__contacts {
+    &__icon {
+      width: 28px;
+      height: 28px;
+      background-color: #fff;
+      border-radius: 14px;
+      padding: 3px;
+      margin-right: 5px;
+    }
+
+    &__phone {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      &__number {
+        color: #fff;
+      }
+    }
+
+    &__email {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__subtitle {
