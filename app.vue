@@ -109,6 +109,10 @@ import summary from "~/assets/summary.json";
   box-shadow: 0px 0px 10px #000;
   width: 700px;
 
+  &__links {
+    margin-top: auto;
+  }
+
   &__name {
     margin-bottom: 0px !important;
   }
