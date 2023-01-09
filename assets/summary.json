@@ -35,14 +35,14 @@
       "role": "Senior FE dev",
       "time": "February 2021 - October 2021",
       "description": "Developing new banking app for loans automatization.",
-      "techstack": ["Vue / Quasar", "NodeJS / GraphQL"]
+      "techstack": ["Vue", "Quasar", "NodeJS", "GraphQL"]
     },
     {
       "company": "<hidden by NDA>",
       "role": "Middle FE dev",
       "time": "November 2021 - August 2022",
       "description": "Developing new modules for the governance web portal.",
-      "techstack": ["Vue / Nuxt"]
+      "techstack": ["Vue", "Nuxt"]
     },
     {
       "company": "HZF",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Asteroids",
-      "tech": "JavaScript / canvas",
+      "tech": "JavaScript",
       "description": "Arcade video game released in 1979 by Atari.",
       "link": "https://pet-serve.onrender.com/asteroids"
     },

@@ -33,7 +33,8 @@
       </a>
     </div>
     <a
-      href="/images/myw3schoolsimage.jpg"
+      :href="links.download"
+      target="_blank"
       download
       class="block-links__download"
     >

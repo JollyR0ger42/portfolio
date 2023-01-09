@@ -7,7 +7,7 @@
     </div>
     <div class="block-exp__right">
       <p class="block-exp__descr">{{experience.description}}</p>
-      <div>
+      <div class="block-exp__techs">
         <span
           v-for="(tech, idx) in experience.techstack"
           :key="idx"
@@ -36,10 +36,17 @@ defineProps({ experience: Object });
     margin-bottom: 5px;
   }
 
+  &__techs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__tech {
     background-color: var(--blue);
     padding: 3px 5px;
     border-radius: 5px;
+    overflow-wrap: normal;
+    margin-bottom: 5px;
 
     &:not(:last-child) {
       margin-right: 5px;

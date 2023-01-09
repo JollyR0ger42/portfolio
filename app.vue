@@ -115,12 +115,20 @@ import summary from "~/assets/summary.json";
   box-shadow: 0px 0px 10px #000;
   width: 700px;
 
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+
   &__links {
     margin-top: auto;
   }
 
   &__name {
     margin-bottom: 0px !important;
+
+    @media only screen and (max-width: 700px) {
+      text-align: center;
+    }
   }
 
   &__educations {
@@ -163,7 +171,7 @@ import summary from "~/assets/summary.json";
     padding: 5px 10px;
     border-radius: 20px;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   &__subtitle2 {
@@ -175,18 +183,22 @@ import summary from "~/assets/summary.json";
   }
 
   &__left {
-    width: 33%;
+    width: 30%;
     background-color: var(--dark-blue);
     color: #fff;
     padding: 10px;
 
-    & > * {
-      margin-bottom: 15px;
+    @media only screen and (max-width: 700px) {
+      align-items: center;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 
   &__right {
-    width: 67%;
+    width: 70%;
     background-color: var(--light-blue);
     color: #000;
   }
@@ -195,6 +207,10 @@ import summary from "~/assets/summary.json";
   &__left {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+    }
   }
 }
 </style>
