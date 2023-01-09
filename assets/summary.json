@@ -1,6 +1,6 @@
 {
   "name": "Aleksandr Kolontai",
-  "position": "Front-end developer",
+  "position": "FE dev",
   "contacts": {
     "phone": "(+380) 63-995-83-38",
     "mail": "kav993@gmail.com"
@@ -23,28 +23,28 @@
   "experience": [
     {
       "company": "Brighta",
-      "role": "Junior Front-end developer",
+      "role": "Junior FE dev",
       "time": "August 2020 - January 2021",
       "description": "Developing new online-educational platform ojowo.com",
       "techstack": ["Vue", "Blades(Laravel)"]
     },
     {
       "company": "Code&Care",
-      "role": "Senior Front-end developer",
+      "role": "Senior FE dev",
       "time": "February 2021 - October 2021",
       "description": "Developing new banking app for loans automatization",
       "techstack": ["Vue / Quasar", "NodeJS / GraphQL"]
     },
     {
       "company": "<hidden by NDA>",
-      "role": "Front-end developer",
+      "role": "Middle FE dev",
       "time": "November 2021 - August 2022",
       "description": "Developing new modules for the governance web portal",
       "techstack": ["Vue / Nuxt"]
     },
     {
       "company": "HZF",
-      "role": "Front-end developer",
+      "role": "Middle FE dev",
       "time": "September 2022 - October 2022",
       "description": "Reskin for Dice app (casino)",
       "techstack": ["PhaserJS", "NodeJS"]

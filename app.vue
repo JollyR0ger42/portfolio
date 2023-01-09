@@ -88,35 +88,15 @@
         </div>
       </div>
       <div class="app__container__right">
-        <div class="app__container__expirience__wrapper">
+        <div class="app__container__experience__wrapper">
           <!-- EXPERIENCE -->
           <h3 class="app__subtitle2">Experience</h3>
-          <div
+          <BlockExperience
             v-for="(experience, idx) in summary.experience"
             :key="idx"
-            class="app__container__expirience"
-          >
-            <div>
-              <span>company:</span>
-              <span>{{experience.company}}</span>
-            </div>
-            <div>
-              <span>role:</span>
-              <span>{{experience.role}}</span>
-            </div>
-            <div>
-              <span>time:</span>
-              <span>{{experience.time}}</span>
-            </div>
-            <div>
-              <span>description:</span>
-              <span>{{experience.description}}</span>
-            </div>
-            <div>
-              <span>techstack:</span>
-              <span>{{experience.techstack}}</span>
-            </div>
-          </div>
+            class="app__container__experience"
+            :experience="experience"
+          />
         </div>
       </div>
     </div>
@@ -128,7 +108,7 @@
 import summary from '~/assets/summary.json'
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .column {
   display: flex;
   flex-direction: column;
