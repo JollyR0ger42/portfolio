@@ -58,32 +58,6 @@
           {{language}}
         </p>
       </div>
-      <!-- EDUCATIONS -->
-      <div class="app__educations column">
-        <h3 class="app__subtitle">Educations</h3>
-        <div
-          v-for="(education, idx) in summary.educations"
-          :key="idx"
-          class="app__education"
-        >
-          <div>
-            <span>School:</span>
-            <span>{{education.institution}}</span>
-          </div>
-          <div>
-            <span>Grade:</span>
-            <span>{{education.degree}}</span>
-          </div>
-          <div>
-            <span>Calendar:</span>
-            <span>{{education.years}}</span>
-          </div>
-          <div>
-            <span>Apartment:</span>
-            <span>{{education.department}}</span>
-          </div>
-        </div>
-      </div>
       <!-- LINKS -->
       <div class="app__links column">
         <h3 class="app__subtitle">Links</h3>
@@ -98,13 +72,23 @@
       </div>
     </div>
     <div class="app__right">
-      <div class="app__experience__wrapper">
-        <!-- EXPERIENCE -->
+      <!-- EDUCATIONS -->
+      <div class="app__educations column">
+        <h3 class="app__subtitle2">Educations</h3>
+        <BlockEducation
+          v-for="(education, idx) in summary.educations"
+          :key="idx"
+          class="app__education"
+          :education="education"
+        />
+      </div>
+      <!-- EXPERIENCE -->
+      <div class="app__experience">
         <h3 class="app__subtitle2">Experience</h3>
         <BlockExperience
           v-for="(experience, idx) in summary.experience"
           :key="idx"
-          class="app__experience"
+          class="app__experience__block"
           :experience="experience"
         />
       </div>
@@ -127,6 +111,14 @@ import summary from "~/assets/summary.json";
   font-size: 16px;
   box-shadow: 0px 0px 10px #000;
   width: 700px;
+
+  &__name {
+    margin-bottom: 0px !important;
+  }
+
+  &__educations {
+    margin-bottom: 20px;
+  }
 
   &__contacts {
     &__icon {
