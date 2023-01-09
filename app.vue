@@ -61,14 +61,7 @@
       <!-- LINKS -->
       <div class="app__links column">
         <h3 class="app__subtitle">Links</h3>
-        <div>
-          <span>Github:</span>
-          <span>{{summary.links.github}}</span>
-        </div>
-        <div>
-          <span>Linkedin:</span>
-          <span>{{summary.links.linkedin}}</span>
-        </div>
+        <BlockLinks :links="summary.links" />
       </div>
     </div>
     <div class="app__right">
@@ -91,6 +84,10 @@
           class="app__experience__block"
           :experience="experience"
         />
+      </div>
+      <!-- PETS -->
+      <div class="app__pets">
+        <h3 class="app__subtitle2">Pet projects</h3>
       </div>
     </div>
   </div>
