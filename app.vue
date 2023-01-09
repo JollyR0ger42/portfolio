@@ -20,7 +20,7 @@
         <div class="app__container__contacts column">
           <h3 class="app__subtitle">Contacts</h3>
           <div>
-            <span>Phone:</span>
+            <img src="~/assets/call.svg" class="app__call">
             <span>{{summary.contacts.phone}}</span>
           </div>
           <div>
@@ -117,6 +117,13 @@ import summary from '~/assets/summary.json'
 .app {
   background-color: #044463;
   min-height: 100vh;
+
+  &__call {
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    margin-left: -10px;
+  }
 
   &__subtitle {
     color: #000;
