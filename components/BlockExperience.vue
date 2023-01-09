@@ -38,7 +38,7 @@ defineProps({ experience: Object });
 
   &__tech {
     background-color: var(--blue);
-    padding: 3px;
+    padding: 3px 5px;
     border-radius: 5px;
 
     &:not(:last-child) {

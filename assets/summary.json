@@ -11,7 +11,7 @@
     "github": "https://github.com/JollyR0ger42",
     "linkedin": "https://www.linkedin.com/in/aleksandr-kolontai-a7437718b/",
     "telegram": "https://t.me/JollyR0ger42",
-    "download": "https://link"
+    "download": "https://pet-serve.onrender.com/CV_Kolontai_A.pdf"
   },
   "languages": ["Ukrainian/Russian (fluent)", "English (B2)"],
   "educations": [
@@ -27,21 +27,21 @@
       "company": "Brighta",
       "role": "Junior FE dev",
       "time": "August 2020 - January 2021",
-      "description": "Developing new online-educational platform ojowo.com",
+      "description": "Developing new online-educational platform ojowo.com.",
       "techstack": ["Vue", "Blades(Laravel)"]
     },
     {
       "company": "Code&Care",
       "role": "Senior FE dev",
       "time": "February 2021 - October 2021",
-      "description": "Developing new banking app for loans automatization",
+      "description": "Developing new banking app for loans automatization.",
       "techstack": ["Vue / Quasar", "NodeJS / GraphQL"]
     },
     {
       "company": "<hidden by NDA>",
       "role": "Middle FE dev",
       "time": "November 2021 - August 2022",
-      "description": "Developing new modules for the governance web portal",
+      "description": "Developing new modules for the governance web portal.",
       "techstack": ["Vue / Nuxt"]
     },
     {
@@ -54,44 +54,46 @@
   ],
   "pets": [
     {
-      "title": "Conway's Game of Life",
-      "description": "react app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    },
-    {
-      "title": "Todo app",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    },
-    {
       "title": "Crypto counter",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    },
-    {
-      "title": "Timer app",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "tech": "Vue",
+      "description": "App for counting crypto with Binance API.",
+      "link": "https://pet-serve.onrender.com/crypto"
     },
     {
       "title": "Asteroids",
-      "description": "js",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "tech": "JavaScript / canvas",
+      "description": "Arcade video game released in 1979 by Atari.",
+      "link": "https://pet-serve.onrender.com/asteroids"
     },
     {
-      "title": "Todo app",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "tech": "React",
+      "title": "Game of Life",
+      "description": "A cellular automaton devised by John Horton Conway.",
+      "link": "https://pet-serve.onrender.com/gol"
     },
     {
-      "title": "web page 1",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "title": "Timer",
+      "tech": "Vue",
+      "description": "Simple timer app.",
+      "link": "https://pet-serve.onrender.com/timer"
     },
     {
-      "title": "web page 2",
-      "description": "vue app",
-      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "title": "Todo",
+      "tech": "Vue",
+      "description": "Simple todo app.",
+      "link": "https://pet-serve.onrender.com/todo"
+    },
+    {
+      "title": "Landing 1",
+      "tech": "HTML / CSS",
+      "description": "Responsive landing page.",
+      "link": "https://pet-serve.onrender.com/web-page-1"
+    },
+    {
+      "title": "Landing 2",
+      "tech": "HTML / CSS",
+      "description": "Responsive landing page.",
+      "link": "https://pet-serve.onrender.com/web-page-2"
     }
   ]
 }

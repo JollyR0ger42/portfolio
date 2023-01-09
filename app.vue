@@ -88,6 +88,12 @@
       <!-- PETS -->
       <div class="app__pets">
         <h3 class="app__subtitle2">Pet projects</h3>
+        <BlockPet
+          v-for="(pet, idx) in summary.pets"
+          :key="idx"
+          class="app__experience__block"
+          :pet="pet"
+        />
       </div>
     </div>
   </div>
