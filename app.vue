@@ -1,111 +1,110 @@
 <template>
-<div class="app">
-  <div class="app__wrapper">
-    <div class="app__container">
-      <div class="app__container__left">
-        <!-- NAME -->
-        <h1 class="app__container__name">
-          {{summary.name}}
-        </h1>
-        <!-- POSITION -->
-        <h3 class="app__container__position">
-          {{summary.position}}
-        </h3>
-        <!-- ABOUT -->
-        <div class="app__container__about column">
-          <h3 class="app__subtitle">About</h3>
-          <p>{{summary.about}}</p>
-        </div>
-        <!-- CONTACTS -->
-        <div class="app__container__contacts column">
-          <h3 class="app__subtitle">Contacts</h3>
-          <div>
-            <img src="~/assets/call.svg" class="app__call">
-            <span>{{summary.contacts.phone}}</span>
-          </div>
-          <div>
-            <span>Email:</span>
-            <span>{{summary.contacts.mail}}</span>
-          </div>
-        </div>
-        <!-- SKILLS -->
-        <div class="app__container__skills column">
-          <h3 class="app__subtitle">Skills</h3>
-          <p
-            v-for="(skill, idx) in summary.skills"
-            :key="idx"
+  <div class="app">
+    <div class="app__left">
+      <!-- NAME -->
+      <h1 class="app__name">
+        {{summary.name}}
+      </h1>
+      <!-- POSITION -->
+      <h3 class="app__position">
+        {{summary.position}}
+      </h3>
+      <!-- ABOUT -->
+      <div class="app__about column">
+        <h3 class="app__subtitle">About</h3>
+        <p>{{summary.about}}</p>
+      </div>
+      <!-- CONTACTS -->
+      <div class="app__contacts column">
+        <h3 class="app__subtitle">Contacts</h3>
+        <div>
+          <img
+            src="~/assets/call.svg"
+            class="app__call"
           >
-            {{skill}}
-          </p>
+          <span>{{summary.contacts.phone}}</span>
         </div>
-        <!-- LANGUAGES -->
-        <div class="app__container__languages column">
-          <h3 class="app__subtitle">Languages</h3>
-          <p
-            v-for="(language, idx) in summary.languages"
-            :key="idx"
-          >
-            {{language}}
-          </p>
+        <div>
+          <span>Email:</span>
+          <span>{{summary.contacts.mail}}</span>
         </div>
-        <!-- EDUCATIONS -->
-        <div class="app__container__educations column">
-          <h3 class="app__subtitle">Educations</h3>
-          <div
-            v-for="(education, idx) in summary.educations"
-            :key="idx"
-            class="app__container__education"
-          >
-            <div>
-              <span>School:</span>
-              <span>{{education.institution}}</span>
-            </div>
-            <div>
-              <span>Grade:</span>
-              <span>{{education.degree}}</span>
-            </div>
-            <div>
-              <span>Calendar:</span>
-              <span>{{education.years}}</span>
-            </div>
-            <div>
-              <span>Apartment:</span>
-              <span>{{education.department}}</span>
-            </div>
-          </div>
-        </div>
-        <!-- LINKS -->
-        <div class="app__container__links column">
-          <h3 class="app__subtitle">Links</h3>
+      </div>
+      <!-- SKILLS -->
+      <div class="app__skills column">
+        <h3 class="app__subtitle">Skills</h3>
+        <p
+          v-for="(skill, idx) in summary.skills"
+          :key="idx"
+        >
+          {{skill}}
+        </p>
+      </div>
+      <!-- LANGUAGES -->
+      <div class="app__languages column">
+        <h3 class="app__subtitle">Languages</h3>
+        <p
+          v-for="(language, idx) in summary.languages"
+          :key="idx"
+        >
+          {{language}}
+        </p>
+      </div>
+      <!-- EDUCATIONS -->
+      <div class="app__educations column">
+        <h3 class="app__subtitle">Educations</h3>
+        <div
+          v-for="(education, idx) in summary.educations"
+          :key="idx"
+          class="app__education"
+        >
           <div>
-            <span>Github:</span>
-            <span>{{summary.links.github}}</span>
+            <span>School:</span>
+            <span>{{education.institution}}</span>
           </div>
           <div>
-            <span>Linkedin:</span>
-            <span>{{summary.links.linkedin}}</span>
+            <span>Grade:</span>
+            <span>{{education.degree}}</span>
+          </div>
+          <div>
+            <span>Calendar:</span>
+            <span>{{education.years}}</span>
+          </div>
+          <div>
+            <span>Apartment:</span>
+            <span>{{education.department}}</span>
           </div>
         </div>
       </div>
-      <div class="app__container__right">
-        <div class="app__container__experience__wrapper">
-          <!-- EXPERIENCE -->
-          <h3 class="app__subtitle2">Experience</h3>
-          <BlockExperience
-            v-for="(experience, idx) in summary.experience"
-            :key="idx"
-            class="app__container__experience"
-            :experience="experience"
-          />
+      <!-- LINKS -->
+      <div class="app__links column">
+        <h3 class="app__subtitle">Links</h3>
+        <div>
+          <span>Github:</span>
+          <span>{{summary.links.github}}</span>
+        </div>
+        <div>
+          <span>Linkedin:</span>
+          <span>{{summary.links.linkedin}}</span>
         </div>
       </div>
     </div>
+    <div class="app__right">
+      <div class="app__experience__wrapper">
+        <!-- EXPERIENCE -->
+        <h3 class="app__subtitle2">Experience</h3>
+        <BlockExperience
+          v-for="(experience, idx) in summary.experience"
+          :key="idx"
+          class="app__experience"
+          :experience="experience"
+        />
+      </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script setup>
-import summary from '~/assets/summary.json'
+import summary from "~/assets/summary.json";
 </script>
 
 <style lang="scss" scoped>
@@ -115,8 +114,10 @@ import summary from '~/assets/summary.json'
 }
 
 .app {
-  background-color: #044463;
-  min-height: 100vh;
+  display: flex;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px #000;
+  width: 700px;
 
   &__call {
     width: 28px;
@@ -146,46 +147,27 @@ import summary from '~/assets/summary.json'
     text-align: center;
   }
 
-  &__wrapper {
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+  &__left {
+    width: 33%;
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 10px;
+
+    & > * {
+      margin-bottom: 15px;
+    }
   }
 
-  &__container {
-    box-shadow: 0px 0px 10px #000;
-    width: 700px;
-    height: 990px;
+  &__right {
+    width: 67%;
+    background-color: var(--light-blue);
+    color: #000;
+  }
+
+  &__right,
+  &__left {
     display: flex;
-
-    &__links {
-      margin-top: auto;
-    }
-
-    &__left {
-      width: 33%;
-      background-color: var(--dark-blue);
-      color: #fff;
-      padding: 10px;
-
-      & > * {
-        margin-bottom: 15px;
-      }
-    }
-
-    &__right {
-      width: 67%;
-      background-color: var(--light-blue);
-      color: #000;
-    }
-
-    &__right, &__left {
-      display: flex;
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 }
 </style>

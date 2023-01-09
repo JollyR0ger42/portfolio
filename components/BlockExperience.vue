@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-defineProps({experience: Object})
+defineProps({ experience: Object });
 </script>
 
 <style lang="scss" scoped>
