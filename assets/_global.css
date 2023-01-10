@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-wrap: anywhere;
-  line-height: 130%;
+  /* line-height: 130%; */
 }
 
 #__nuxt {
