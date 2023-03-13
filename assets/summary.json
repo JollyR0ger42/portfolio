@@ -5,7 +5,7 @@
     "phone": "(+380) 63-995-83-38",
     "mail": "kav993@gmail.com"
   },
-  "about": "Self-taught programmer. Mainly frontend. At the moment working on the transition to ML Engineer.",
+  "about": "Self-taught programmer. Mainly frontend. At the moment working on the transition to  Full-stack Engineer.",
   "skills": ["JavaScript", "GIT", "HTML/CSS"],
   "links": {
     "github": "https://github.com/JollyR0ger42",
@@ -57,43 +57,43 @@
       "title": "Crypto counter",
       "tech": "Vue",
       "description": "App for counting crypto with Binance API.",
-      "link": "https://pet-serve.onrender.com/crypto"
+      "link": "/crypto"
     },
     {
       "title": "Asteroids",
       "tech": "JavaScript",
       "description": "Arcade video game released in 1979 by Atari.",
-      "link": "https://pet-serve.onrender.com/asteroids"
+      "link": "/asteroids"
     },
     {
       "tech": "React",
       "title": "Game of Life",
       "description": "A cellular automaton devised by John Horton Conway.",
-      "link": "https://pet-serve.onrender.com/gol"
+      "link": "/gol"
     },
     {
       "title": "Timer",
       "tech": "Vue",
       "description": "Simple timer app.",
-      "link": "https://pet-serve.onrender.com/timer"
+      "link": "/timer"
     },
     {
       "title": "Todo",
       "tech": "Vue",
       "description": "Simple todo app.",
-      "link": "https://pet-serve.onrender.com/todo"
+      "link": "/todo"
     },
     {
       "title": "Landing 1",
       "tech": "HTML / CSS",
       "description": "Responsive landing page.",
-      "link": "https://pet-serve.onrender.com/web-page-1"
+      "link": "/web-page-1"
     },
     {
       "title": "Landing 2",
       "tech": "HTML / CSS",
       "description": "Responsive landing page.",
-      "link": "https://pet-serve.onrender.com/web-page-2"
+      "link": "/web-page-2"
     }
   ]
 }
