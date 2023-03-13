@@ -7,17 +7,18 @@
     </div>
     <div class="block-pet__right">
       <p class="block-pet__descr">{{pet.description}}</p>
-      <a
+      <nuxt-link
         :href="pet.link"
         class="block-pet__link"
         target="_blank"
+        ssr="false"
       >
         <img
           src="~/assets/web.svg"
           class="block-pet__link__icon"
         >
         <span>open in new tab</span>
-      </a>
+      </nuxt-link>
     </div>
   </div>
 </template>
