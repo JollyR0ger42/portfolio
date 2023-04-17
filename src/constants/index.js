@@ -99,57 +99,57 @@ const technologies = [
   },
 ];
 
-const about = "My name is Aleksandr, I live in Kyiv. I am a self-taught programmer with a passion for web development. My journey began with a six months internship as a fullstack developer. During my  time as a fullstack, I contributed to the development of a hiking trip app using Angular and Flask, with a focus on Python for the backend. After completing the project, I decided to shift my focus more towards frontend development, which has been my primary focus for the past two years. I have primarily worked as a Vue frontend developer, but I am also familiar with React, which is my personal favorite and the one I use in all of my pet projects. As of now i feel pretty comfortable with frontend part of development, so i shifted my focus to fullstack development, and my next goal is to delve into neural networks."
+const about = "My name is Aleksandr, I live in Kyiv. I am a self-taught programmer with a passion for web development. My journey began with a six months internship as a full-stack developer. During my  time as a full-stack, I contributed to the development of a hiking trip app using Angular and Flask, with a focus on Python for the back-end. After completing the project, I decided to shift my focus more towards front-end development, which has been my primary focus for the past two years. I have primarily worked as a Vue front-end developer, but I am also familiar with React, which is my personal favorite and the one I use in all of my pet projects. As of now i feel pretty comfortable with front-end part of development, so i shifted my focus to full-stack development, and my next goal is to delve into neural networks."
 
 const experiences = [
   {
-    title: "Intern Fullstack Developer",
+    title: "Intern Full-stack Developer",
     company_name: "SoftServe",
     icon: softserve,
     iconBg: "#000",
     date: "January 2020 - July 2020",
     points: [
       "Developing new REST API with Flask.",
-      "Designing and developing frontend with Angular.",
-      "Backend to frontend integration.",
+      "Designing and developing front-end with Angular.",
+      "Back-end to front-end integration.",
       "Participating in code reviews and providing feedback to other developers.",
     ],
   },
   {
-    title: "Junior Frontend Developer",
+    title: "Junior Front-end Developer",
     company_name: "Brighta",
     icon: brighta,
     iconBg: "#000",
     date: "July 2020 - January 2021",
     points: [
-      "Developing frontend from Figma design using Vue.",
+      "Developing front-end from Figma design using Vue.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Backend to frontend integration.",
+      "Back-end to front-end integration.",
     ],
   },
   {
-    title: "Middle Fullstack Developer",
+    title: "Middle Full-stack Developer",
     company_name: "Code&Care",
     icon: codecare,
     iconBg: "#000",
     date: "February 2021 - October 2021",
     points: [
-      "Collaborating with CTO to create backend architecture",
-      "Developing backend using NodeJS and Apollo(GraphQL)",
-      "Developing frontend using Quasar(Vue framework).",
-      "Backend to frontend integration.",
+      "Collaborating with CTO to create back-end architecture.",
+      "Developing back-end using NodeJS and Apollo(GraphQL).",
+      "Developing front-end using Quasar(Vue framework).",
+      "Back-end to front-end integration.",
     ],
   },
   {
-    title: "Middle Frontend Developer",
+    title: "Middle Front-end Developer",
     company_name: "Diia",
     icon: diia,
     iconBg: "#000",
     date: "November 2021 - August 2022",
     points: [
-      "Developing frontend from Figma design using Vue.",
+      "Developing front-end from Figma design using Vue.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Backend to frontend integration.",
+      "Back-end to front-end integration.",
       "Refactoring legacy components.",
     ],
   },
@@ -163,7 +163,7 @@ const experiences = [
       "Collaborating with designers to reskin casino app.",
       "Developing new features for casino app.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Backend to frontend integration.",
+      "Back-end to front-end integration.",
       "Refactoring legacy components.",
     ],
   },
