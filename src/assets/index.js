@@ -32,6 +32,7 @@ import hzf from './company/hzf.png';
 import gol from "./gol.png";
 import cryptocounter from "./cryptocounter.png";
 import landing from "./landing.png";
+import asteroids from './asteroids.png';
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   telegram,
   downloadPdf,
   vue,
+  asteroids,
 };

@@ -26,6 +26,7 @@ import {
   telegram,
   downloadPdf,
   vue,
+  asteroids,
 } from "../assets";
 
 export const navLinks = [
@@ -196,6 +197,24 @@ const projects = [
     image: cryptocounter,
     source_code_link: "https://github.com/JollyR0ger42/crypto-counter",
     demo_link: "https://kolontai-cv.up.railway.app/crypto/",
+  },
+  {
+    name: "Asteroids",
+    description:
+      "Arcade video game released in 1979 by Atari.",
+    tags: [
+      {
+        name: "js",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "canvas",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: asteroids,
+    source_code_link: "https://github.com/JollyR0ger42/Asteroids-1979",
+    demo_link: "https://kolontai-cv.up.railway.app/asteroids/",
   },
   {
     name: "Landing page",
