@@ -1,20 +1,30 @@
 import { BrowserRouter } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
-import { Experience, About, Navbar, Works, Footer } from "./components";
+import { Experience, About, Navbar, Works, Footer, ParallaxBg } from "./components";
 
 import { useMotionValue } from 'framer-motion';
 
 const App = () => {
   const scrollY = useMotionValue(0);
 
-  window.addEventListener('scroll', () => {
-    scrollY.set(window.scrollY);
-    console.log(scrollY.getVelocity());
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      scrollY.set(window.scrollY);
+      console.log(scrollY.getVelocity());
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-app'>
+      <div className='relative z-0'>
+        <ParallaxBg />
         <Navbar />
         <About />
         <Experience />

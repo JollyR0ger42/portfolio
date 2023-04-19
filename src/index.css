@@ -53,10 +53,6 @@
   background: -webkit-linear-gradient(-90.13deg, #0057b7 2%, #ffd700 98%);
 }
 
-.bg-app {
-  background: -webkit-linear-gradient(-90.13deg, #0058b73b 2%, #ffa60025 98%) !important;
-}
-
 .orange-text-gradient {
   background: #f12711;
   /* fallback for old browsers */
