@@ -11,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       scrollY.set(window.scrollY);
-      console.log(scrollY.getVelocity());
+      // console.log(scrollY.getVelocity());
     };
 
     window.addEventListener('scroll', handleScroll);

@@ -18,7 +18,6 @@ const ParallaxBg = () => {
   }
 
   useEffect(() => {
-    console.log('mounted', bg1);
     scatterDots(numDots);
   }, []);
 
