@@ -24,7 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='relative z-0'>
-        {/* <ParallaxBg /> */}
+        <ParallaxBg />
         <Navbar />
         <About />
         <Experience />

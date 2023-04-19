@@ -1,4 +1,3 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { MotionWrapper } from "../hoc";
@@ -48,7 +47,7 @@ const Tech = () => {
   return (
     <div className='flex flex-row flex-wrap justify-center gap-10'>
       {technologies.map((technology, index) => (
-        <Tilt key={index}>
+        <div key={index}>
           <motion.div
             variants={flyIn(0.5 + index * 0.05)}
             className='w-full blue-yellow-gradient p-[1px] shadow-card overflow-hidden'
@@ -61,7 +60,7 @@ const Tech = () => {
               <img className="w-16 h-16 object-contain" src={technology.icon} />
             </motion.div>
           </motion.div>
-        </Tilt>
+        </div>
       ))}
     </div>
   );
