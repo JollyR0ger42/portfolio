@@ -31,10 +31,12 @@ const sideVariants = {
 
 const SideInitial = () => {
   return (
-    <motion.div variants={sideVariants} className='flex flex-col justify-center items-center mt-5 pt-5 min-w-[75px] side-initial-mask'>
-      <motion.div variants={circleVariants} className='w-5 h-5 rounded-full violet-neon z-[1]' />
-      <motion.div className='w-1 sm:h-80 h-40 violet-neon z-0' />
-    </motion.div>
+    <div className="w-[50px] flex items-center justify-center mt-[-20px]">
+      <motion.div variants={sideVariants} className='flex flex-col justify-center items-center mt-5 pt-5 min-w-[75px] side-initial-mask'>
+        <motion.div variants={circleVariants} className='w-5 h-5 rounded-full violet-neon z-[1]' />
+        <motion.div className='w-1 sm:h-80 h-40 violet-neon z-0' />
+      </motion.div>
+    </div>
   )
 };
 
