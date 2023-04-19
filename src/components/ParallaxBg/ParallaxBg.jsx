@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { useAnimate, motion } from "framer-motion";
+import { useEffect, useRef, useState } from 'react';
+import { useAnimate, motion, useSpring } from "framer-motion";
 
 import './styles.css';
 
@@ -29,11 +29,37 @@ const ParallaxBg = () => {
 
   useEffect(() => {
     scatterDots(numDots);
-    animate(bg1.current, { y: "100%" }, {
+    animate(bg1.current, { top: "100%" }, {
       ease: "linear",
-      duration: 100,
+      duration: 10,
       onComplete: () => console.log("done2"),
     });
+  }, []);
+
+  const scrollY = useSpring(0, {
+    stiffness: 500,
+    damping: 50,
+  });
+
+  useEffect(() => {
+    const unsubscribeY = scrollY.on('change', (latest) => {
+      console.log("scrollY.getVelocity()", scrollY.getVelocity());
+    });
+    return () => {
+      unsubscribeY();
+    };
+  }, [scrollY]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      scrollY.set(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (

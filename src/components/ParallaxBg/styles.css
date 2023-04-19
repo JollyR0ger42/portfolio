@@ -6,6 +6,7 @@
   height: 100%;
   z-index: -1;
   background: -webkit-linear-gradient(-90.13deg, #4fa4ff3b 2%, #0142883b 98%);
+  overflow: hidden;
 }
 
 .parallax-bg__dot {
@@ -18,6 +19,7 @@
 }
 
 .parallax-bg > div {
+  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -25,5 +27,5 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(-90.13deg, #4fa4ff3b 2%, #0142883b 98%);
+  /* background: -webkit-linear-gradient(-90.13deg, #4fa4ff3b 2%, #0142883b 98%); */
 }
