@@ -1,11 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { useAnimationControls, motion } from "framer-motion";
+import { useAnimate, motion } from "framer-motion";
 
 import './styles.css';
 
 const ParallaxBg = () => {
-  const controls = useAnimationControls();
-  const bg0 = useRef(null);
+  const [bg0, animate] = useAnimate();
   const bg1 = useRef(null);
   const numDots = 100;
 
@@ -21,20 +20,16 @@ const ParallaxBg = () => {
 
   useEffect(() => {
     scatterDots(numDots);
-    controls.start({
-      y: "100%", transition: {
-        ease: "linear",
-        duration: 30,
-      }
+    animate(bg1.current, { y: "-100%" }, {
+      ease: "linear",
+      duration: 10,
+      onComplete: () => console.log("done2"),
     });
   }, []);
 
   return (
     <div ref={bg0} className='parallax-bg'>
-      <motion.div
-        animate={controls}
-        ref={bg1}
-      />
+      <motion.div ref={bg1} />
     </div>
   )
 };
