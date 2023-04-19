@@ -15,7 +15,6 @@ const About = () => {
         className={`inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start`}
       >
         <SideInitial />
-
         <div>
           <motion.div
             variants={textVariant()}
