@@ -5,6 +5,7 @@ import './styles.css';
 
 const ParallaxBg = () => {
   const [bg0, animate] = useAnimate();
+  let direction = 1;
   const bg1 = useRef(null);
   const numDots = 1000;
   let animation;
@@ -28,14 +29,22 @@ const ParallaxBg = () => {
     bg1.current.appendChild(layer2);
   }
 
+  const animateBg = (target = "100%") => {
+    const nextTarget = target === "100%" ? "-100%" : "100%"
+    animation = animate(bg1.current, { top: target }, {
+      ease: "linear",
+      duration: 50,
+      repeat: Infinity,
+      onComplete: () => {
+        direction *= -1;
+        animateBg(nextTarget);
+      },
+    });
+  }
+
   useEffect(() => {
     scatterDots(numDots);
-    animation = animate(bg1.current, { top: "100%" }, {
-      ease: "linear",
-      duration: 100,
-      repeat: Infinity,
-      onComplete: () => console.log("done2"),
-    });
+    animateBg();
   }, []);
 
   const scrollY = useSpring(0, {
@@ -45,12 +54,17 @@ const ParallaxBg = () => {
 
   useEffect(() => {
     const unsubscribeY = scrollY.on('change', (latest) => {
-      const velocity = scrollY.getVelocity();
-      console.log("scrollY.getVelocity()", velocity);
-      if (velocity > 10 && animation) {
-        animation.speed = 10;
-      } else {
-        animation.speed = 1;
+      if (animation) {
+        let velocity = scrollY.getVelocity();
+        if (velocity < 10 && velocity > -10) velocity = 0;
+
+        if (velocity > 0) {
+          animation.speed = (1 + velocity/300) * direction;
+        } else if (velocity < 0) {
+          animation.speed = (-1 + velocity/300) * direction;
+        } else {
+          animation.speed = Math.min(1, Math.max(-1, animation.speed));
+        }
       }
     });
     return () => {
