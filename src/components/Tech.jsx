@@ -51,6 +51,7 @@ const Tech = () => {
           <motion.div
             variants={flyIn(0.5 + index * 0.05)}
             className='w-full blue-yellow-gradient p-[1px] shadow-card overflow-hidden'
+            whileHover={{ scale: 1.1 }}
           >
             <motion.div
               variants={circ2Rect(0.5 + index * 0.05)}
