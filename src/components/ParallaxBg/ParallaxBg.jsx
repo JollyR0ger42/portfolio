@@ -7,6 +7,7 @@ const ParallaxBg = () => {
   const [bg0, animate] = useAnimate();
   const bg1 = useRef(null);
   const numDots = 1000;
+  let animation;
 
   const scatterDots = (amount) => {
     const layer1 = document.createElement("div");
@@ -29,9 +30,10 @@ const ParallaxBg = () => {
 
   useEffect(() => {
     scatterDots(numDots);
-    animate(bg1.current, { top: "100%" }, {
+    animation = animate(bg1.current, { top: "100%" }, {
       ease: "linear",
-      duration: 10,
+      duration: 100,
+      repeat: Infinity,
       onComplete: () => console.log("done2"),
     });
   }, []);
@@ -43,7 +45,13 @@ const ParallaxBg = () => {
 
   useEffect(() => {
     const unsubscribeY = scrollY.on('change', (latest) => {
-      console.log("scrollY.getVelocity()", scrollY.getVelocity());
+      const velocity = scrollY.getVelocity();
+      console.log("scrollY.getVelocity()", velocity);
+      if (velocity > 10 && animation) {
+        animation.speed = 10;
+      } else {
+        animation.speed = 1;
+      }
     });
     return () => {
       unsubscribeY();
