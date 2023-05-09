@@ -160,7 +160,7 @@ const experiences = [
     iconBg: "#000",
     date: "September 2022 - November 2022",
     points: [
-      "Collaborating with designers to reskin casino app.",
+      "Collaborating with designers to reskin casino app with Phaser.",
       "Developing new features for casino app.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Back-end to front-end integration.",
