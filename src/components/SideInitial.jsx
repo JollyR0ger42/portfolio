@@ -12,7 +12,7 @@ const circleVariants = {
     transition: {
       ease: [0, 0.71, 0.2, 1.5],
       duration: 0.2,
-      delay: 0.5,
+      delay: 0.4,
     }
   },
 }
