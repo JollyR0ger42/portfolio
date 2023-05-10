@@ -1,18 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-  color-scheme: dark;
-}
-
 .black-gradient {
   background: #000000;
   /* fallback for old browsers */
@@ -94,21 +79,6 @@
   background: linear-gradient(to top,
       #2f80ed,
       #56ccf2);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.pink-text-gradient {
-  background: #ec008c;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #ec008c,
-      #fc6767);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #ec008c,
-      #fc6767);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

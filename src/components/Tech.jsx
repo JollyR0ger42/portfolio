@@ -58,7 +58,7 @@ const Tech = () => {
               className='md:w-28 w-20 md:h-28 h-20 bg-tertiary flex justify-evenly items-center flex-col'
               key={technology.name}
             >
-              <img className="w-16 h-16 object-contain" src={technology.icon} />
+              <img className="w-16 h-16 object-contain" alt={technology.name} src={technology.icon} />
             </motion.div>
           </motion.div>
         </div>
