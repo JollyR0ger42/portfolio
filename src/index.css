@@ -83,8 +83,3 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* Expirience time line border radius */
-.vertical-timeline-element-content {
-  border-radius: 0.25em 0.25em 0 0;
-}

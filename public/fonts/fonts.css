@@ -4,6 +4,7 @@
   src: url('/fonts/Poppins-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (200 weight) */
@@ -12,6 +13,7 @@
   src: url('/fonts/Poppins-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (300 weight) */
@@ -20,6 +22,7 @@
   src: url('/fonts/Poppins-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (400 weight) */
@@ -28,6 +31,7 @@
   src: url('/fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (500 weight) */
@@ -36,6 +40,7 @@
   src: url('/fonts/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (600 weight) */
@@ -44,6 +49,7 @@
   src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (700 weight) */
@@ -52,6 +58,7 @@
   src: url('/fonts/Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (800 weight) */
@@ -60,6 +67,7 @@
   src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Define a @font-face rule for the Poppins font family (900 weight) */
@@ -68,4 +76,5 @@
   src: url('/fonts/Poppins-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }

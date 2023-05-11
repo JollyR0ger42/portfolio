@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { Experience, About, Navbar, Works, Footer, ParallaxBg } from "./components";
+import "./index.css";
 
 const App = () => {
   return (
