@@ -3,9 +3,27 @@ import { about } from "../constants";
 import { MotionWrapper } from "../hoc";
 
 import { motion } from "framer-motion";
-import { textVariant } from "../utils/motion";
 import Tech from './Tech';
 import SideInitial from "./SideInitial";
+
+export const textVariant = (delay) => {
+  return {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        type: "spring",
+        delay: delay,
+      },
+    },
+  };
+};
+
 
 const About = () => {
   return (
@@ -17,14 +35,16 @@ const About = () => {
         <SideInitial />
         <div>
           <motion.div
-            variants={textVariant()}
+            initial={textVariant().hidden}
+            animate={textVariant().show}
             className={`${styles.heroHeadText} text-white`}
           >
             <span className='text-[#915EFF]'>Hi</span>
           </motion.div>
           <motion.p
             className={`${styles.heroSubText} mt-2 text-white-100`}
-            variants={textVariant(0.1)}
+            initial={textVariant(0.1).hidden}
+            animate={textVariant(0.1).show}
           >
             {about}
           </motion.p>

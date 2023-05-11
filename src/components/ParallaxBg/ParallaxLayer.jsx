@@ -87,7 +87,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
 
   return (
     <div ref={bg0} className='parallax-bg_wrapper'>
-      <motion.div ref={bg1} />
+      <motion.div ref={bg1} layout/>
     </div>
   )
 };
