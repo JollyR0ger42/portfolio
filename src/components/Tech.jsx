@@ -19,7 +19,7 @@ const flyIn = (delay) => {
       transition: {
         type: "spring",
         delay: delay,
-        duration: 2,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
@@ -36,7 +36,7 @@ const circ2Rect = (delay) => {
       transition: {
         type: "spring",
         delay: delay,
-        duration: 2,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
@@ -49,12 +49,12 @@ const Tech = () => {
       {technologies.map((technology, index) => (
         <div key={index}>
           <motion.div
-            variants={flyIn(0.5 + index * 0.05)}
+            variants={flyIn(index * 0.05)}
             className='w-full blue-yellow-gradient p-[1px] shadow-card overflow-hidden'
             whileHover={{ scale: 1.1 }}
           >
             <motion.div
-              variants={circ2Rect(0.5 + index * 0.05)}
+              variants={circ2Rect(index * 0.05)}
               className='md:w-28 w-20 md:h-28 h-20 bg-tertiary flex justify-evenly items-center flex-col'
               key={technology.name}
             >

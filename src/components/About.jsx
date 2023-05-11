@@ -24,7 +24,7 @@ const About = () => {
           </motion.div>
           <motion.p
             className={`${styles.heroSubText} mt-2 text-white-100`}
-            variants={textVariant(0.25)}
+            variants={textVariant(0.1)}
           >
             {about}
           </motion.p>
