@@ -8,9 +8,11 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   let animation;
 
   const scatterDots = (amount) => {
+    bg1.current.innerHTML = '';
+    const normalize = bg1.current.offsetWidth * bg1.current.offsetHeight / 10000000;
     const layer1 = document.createElement("div");
     layer1.className = "parallax-bg__layer";
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount * normalize; i++) {
       const dot = document.createElement("div");
       dot.className = "parallax-bg__dot";
       dot.style.left = Math.random() * bg1.current.offsetWidth + "px";
@@ -29,6 +31,12 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
     bg1.current.appendChild(layer2);
   }
 
+  const drawBg = () => {
+    console.log('drawbg');
+    scatterDots(starsAmount);
+    animateBg();
+  }
+
   const animateBg = (target = "100%") => {
     const nextTarget = target === "100%" ? "-100%" : "100%";
     const duration = 10000 / starsSpeed;
@@ -44,8 +52,12 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   }
 
   useEffect(() => {
-    scatterDots(starsAmount);
-    animateBg();
+    drawBg();
+    window.addEventListener('resize', drawBg);
+
+    return () => {
+      window.removeEventListener('resize', drawBg);
+    };
   }, []);
 
   const scrollY = useSpring(0, {
