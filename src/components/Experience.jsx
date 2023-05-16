@@ -3,8 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
-import "react-vertical-timeline-component/style.min.css";
+import { useEffect, useState } from "react";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
@@ -57,6 +56,21 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let resizeEventId;
+    const loadStyles = async () => {
+      await import("react-vertical-timeline-component/style.min.css");
+      setLoaded(true);
+      resizeEventId = setTimeout(() => window.dispatchEvent(new Event('resize')), 1000)
+    };
+
+    loadStyles();
+
+    return () => clearTimeout(resizeEventId);
+  }, []);
+
   return (
     <div className={styles.container}>
       <p className="p-anchor" id="work">&nbsp;</p>
@@ -64,16 +78,19 @@ const Experience = () => {
         <TitleWave text="Work Experience" />
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
+      {loaded ?
+        <div className='mt-20 flex flex-col'>
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={experience}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+        : <h1>Loading...</h1>
+      }
     </div>
   );
 };
