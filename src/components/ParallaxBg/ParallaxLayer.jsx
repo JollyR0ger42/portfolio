@@ -32,7 +32,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   }
 
   const drawBg = () => {
-    console.log('drawbg');
+    direction = 1;
     scatterDots(starsAmount);
     animateBg();
   }
