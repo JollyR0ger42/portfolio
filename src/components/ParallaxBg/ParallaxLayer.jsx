@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useAnimate, motion, useSpring } from "framer-motion";
 
-const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration = 1, starRadius = 10 }) => {
+const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration = 1, starRadius = 10, delay = 0 }) => {
   const [bg0, animate] = useAnimate();
+  let bgIsDrawing = false;
   let direction = 1;
   const bg1 = useRef(null);
   let animation;
@@ -32,9 +33,17 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   }
 
   const drawBg = () => {
-    direction = 1;
-    scatterDots(starsAmount);
-    animateBg();
+    if (!bgIsDrawing) {
+      bgIsDrawing = true;
+      animate(bg0.current, {opacity: 0}, {duration: 1});
+      setTimeout(() => {
+        direction = 1;
+        animate(bg0.current, {opacity: 1}, {duration: 1});
+        scatterDots(starsAmount);
+        animateBg();
+        bgIsDrawing = false;
+      }, (1+delay) * 1000);
+    }
   }
 
   const animateBg = (target = "100%") => {

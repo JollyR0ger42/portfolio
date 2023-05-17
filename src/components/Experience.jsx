@@ -63,7 +63,7 @@ const Experience = () => {
     const loadStyles = async () => {
       await import("react-vertical-timeline-component/style.min.css");
       setLoaded(true);
-      resizeEventId = setTimeout(() => window.dispatchEvent(new Event('resize')), 1000)
+      resizeEventId = setTimeout(() => window.dispatchEvent(new Event('resize')), 100)
     };
 
     loadStyles();
