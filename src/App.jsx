@@ -1,37 +1,49 @@
 import { BrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { Experience, About, Navbar, Works, Footer, ParallaxBg } from "./components";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    let resizeEventId;
     const loadStyles = async () => {
       const cssPromises = [];
-
       cssPromises.push(import("./index.css"));
       cssPromises.push(import("react-vertical-timeline-component/style.min.css"));
       cssPromises.push(import("./components/ParallaxBg/styles.css"));
       cssPromises.push(import("./components/TitleWave/styles.css"));
       await Promise.all(cssPromises);
-
-      console.log('resize');
-      resizeEventId = setTimeout(() => window.dispatchEvent(new Event('resize')), 100)
+      setIsLoading(false);
     };
     loadStyles();
-    return () => clearTimeout(resizeEventId);
   }, []);
 
   return (
     <BrowserRouter>
-      <div className='relative z-0'>
-        <ParallaxBg />
-        <Navbar />
-        <About />
-        <Experience />
-        <Works />
-        <Footer />
-      </div>
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            className="loading-screen"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Loading...
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {!isLoading && (
+        <div className='relative z-0'>
+          <ParallaxBg />
+          <Navbar />
+          <About />
+          <Experience />
+          <Works />
+          <Footer />
+        </div>
+      )}
     </BrowserRouter>
   );
 }

@@ -33,9 +33,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   }
 
   const drawBg = () => {
-    console.log('TRYdrwbg');
     if (!bgIsDrawing) {
-      console.log('drwbg');
       bgIsDrawing = true;
       animate(bg0.current, {opacity: 0}, {duration: 1});
       setTimeout(() => {
