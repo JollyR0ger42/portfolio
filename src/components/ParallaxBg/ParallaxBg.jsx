@@ -1,17 +1,6 @@
 import ParallaxLayer from './ParallaxLayer';
-import { useEffect } from "react";
 
 const ParallaxBg = () => {
-  useEffect(() => {
-    let resizeEventId;
-    const loadStyles = async () => {
-      await import("./styles.css");
-      resizeEventId = setTimeout(() => window.dispatchEvent(new Event('resize')), 100)
-    };
-    loadStyles();
-    return () => clearTimeout(resizeEventId);
-  }, []);
-
   return (
     <div className="parallax-bg">
       < ParallaxLayer starsAmount={200} starRadius={1} starsSpeed={7} starsAcceleration={1} delay={1} />

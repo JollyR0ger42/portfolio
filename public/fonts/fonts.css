@@ -34,6 +34,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Define a @font-face rule for the Poppins font family (600 weight) */
 @font-face {
   font-family: 'Poppins';
@@ -57,6 +65,14 @@
   font-family: 'Poppins';
   src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
   font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
