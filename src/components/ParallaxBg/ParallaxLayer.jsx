@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react';
-import { useAnimate, motion, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from 'react';
+import { useAnimate, motion } from "framer-motion";
 
-const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration = 1, starRadius = 10, delay = 0 }) => {
+const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, delay = 0, direction = 1 }) => {
   const [bg0, animate] = useAnimate();
   let bgIsDrawing = false;
-  let direction = 1;
   const bg1 = useRef(null);
-  let animation;
+  const [animation, setAnimation] = useState();
 
   const scatterDots = (amount) => {
     bg1.current.innerHTML = '';
@@ -33,11 +32,11 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   }
 
   const drawBg = () => {
-    if (!bgIsDrawing) {
+    if (!bgIsDrawing && bg0.current) {
       bgIsDrawing = true;
       animate(bg0.current, {opacity: 0}, {duration: 1});
       setTimeout(() => {
-        direction = 1;
+        // direction = 1;
         animate(bg0.current, {opacity: 1}, {duration: 1});
         scatterDots(starsAmount);
         animateBg();
@@ -49,15 +48,15 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
   const animateBg = (target = "100%") => {
     const nextTarget = target === "100%" ? "-100%" : "100%";
     const duration = 10000 / starsSpeed;
-    animation = animate(bg1.current, { top: target }, {
+    setAnimation(animate(bg1.current, { top: target }, {
       ease: "linear",
       duration: duration,
       repeat: Infinity,
       onComplete: () => {
-        direction *= -1;
+        // direction *= -1;
         animateBg(nextTarget);
       },
-    });
+    }));
   }
 
   useEffect(() => {
@@ -69,42 +68,10 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starsAcceleration 
     };
   }, []);
 
-  const scrollY = useSpring(0, {
-    stiffness: 500,
-    damping: 50,
-  });
 
   useEffect(() => {
-    const unsubscribeY = scrollY.on('change', (latest) => {
-      if (animation) {
-        let velocity = scrollY.getVelocity();
-        if (velocity < 10 && velocity > -10) velocity = 0;
-
-        if (velocity > 0) {
-          animation.speed = (1 + velocity * starsAcceleration / 1000) * direction;
-        } else if (velocity < 0) {
-          animation.speed = (-1 + velocity * starsAcceleration / 1000) * direction;
-        } else {
-          animation.speed = Math.min(1, Math.max(-1, animation.speed));
-        }
-      }
-    });
-    return () => {
-      unsubscribeY();
-    };
-  }, [scrollY]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      scrollY.set(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    if (animation) animation.speed = direction;
+  }, [direction]);
 
   return (
     <div ref={bg0} className='parallax-bg_wrapper'>
