@@ -14,6 +14,7 @@ const App = () => {
       cssPromises.push(import("react-vertical-timeline-component/style.min.css"));
       cssPromises.push(import("./components/ParallaxBg/styles.css"));
       cssPromises.push(import("./components/TitleWave/styles.css"));
+      cssPromises.push(import("./assets/fonts/fonts.css"));
       await Promise.all(cssPromises);
       setIsLoading(false);
     };
