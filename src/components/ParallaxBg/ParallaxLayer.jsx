@@ -6,6 +6,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
   let bgIsDrawing = false;
   const bg1 = useRef(null);
   const [animation, setAnimation] = useState();
+  let [directionNorm, setDirectionNorm]  = useState(1);
 
   const scatterDots = (amount) => {
     bg1.current.innerHTML = '';
@@ -36,7 +37,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
       bgIsDrawing = true;
       animate(bg0.current, {opacity: 0}, {duration: 1});
       setTimeout(() => {
-        // direction = 1;
+        setDirectionNorm(1);
         animate(bg0.current, {opacity: 1}, {duration: 1});
         scatterDots(starsAmount);
         animateBg();
@@ -53,7 +54,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
       duration: duration,
       repeat: Infinity,
       onComplete: () => {
-        // direction *= -1;
+        setDirectionNorm(prev => prev * (-1));
         animateBg(nextTarget);
       },
     }));
@@ -70,8 +71,8 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
 
 
   useEffect(() => {
-    if (animation) animation.speed = direction;
-  }, [direction]);
+    if (animation) animation.speed = direction * directionNorm;
+  }, [direction, directionNorm]);
 
   return (
     <div ref={bg0} className='parallax-bg_wrapper'>
