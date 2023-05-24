@@ -7,7 +7,7 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
   const bg1 = useRef(null);
   const [animation, setAnimation] = useState();
   let [directionNorm, setDirectionNorm]  = useState(1);
-  let prevHeight, prevWidth;
+  let prevHeight;
 
   const scatterDots = (amount) => {
     bg1.current.innerHTML = '';
@@ -62,17 +62,14 @@ const ParallaxLayer = ({ starsAmount = 100, starsSpeed = 100, starRadius = 10, d
   }
 
   const handleResize = () => {
-    console.log('prevWidth', prevWidth, 'prevHeight', prevHeight, 'window.innerWidth', window.innerWidth, 'window.innerHeight', window.innerHeight);
-    if ((prevWidth !== window.innerWidth) || (prevHeight !== window.innerHeight)) {
+    if (prevHeight !== window.innerHeight) {
       drawBg();
-      prevWidth = window.innerWidth || document.documentElement.clientWidth;
       prevHeight = window.innerHeight || document.documentElement.clientHeight;
     }
   };
 
   useEffect(() => {
     drawBg();
-    prevWidth = window.innerWidth || document.documentElement.clientWidth;
     prevHeight = window.innerHeight || document.documentElement.clientHeight;
     window.addEventListener('resize', handleResize);
 
