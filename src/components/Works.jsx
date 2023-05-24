@@ -1,4 +1,3 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import SVG from 'react-inlinesvg';
 
@@ -21,15 +20,11 @@ const ProjectCard = ({
   demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl w-[360px]'
-      >
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      whileHover={{ scale: 1.1 }}
+      className='bg-tertiary p-5 rounded-2xl w-[360px]'
+    >
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
@@ -77,7 +72,6 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
     </motion.div>
   );
 };
@@ -94,7 +88,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-center text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects demonstrate my skills and experience through real-world examples. Each project is briefly described and includes links to code repositories and live demos. 
+          Following projects demonstrate my skills and experience through real-world examples. Each project is briefly described and includes links to code repositories and live demos.
         </motion.p>
       </div>
 
