@@ -1,3 +1,3 @@
-# portfolio
+# portfolio on React
 
-https://kolontai-cv.up.railway.app/
+deployed: https://kolontai-cv.up.railway.app/
