@@ -17,6 +17,7 @@ const App = () => {
       cssPromises.push(import("./assets/fonts/fonts.css"));
       await Promise.all(cssPromises);
       setIsLoading(false);
+      setTimeout(() => window.location.replace(location.href), 500)
     };
     loadStyles();
   }, []);

@@ -94,7 +94,7 @@ const technologies = [
   },
 ];
 
-const about = "My name is Aleksandr, I live in Kyiv. I am a self-taught programmer with a passion for web development. My journey began with a six months internship as a full-stack developer. During my  time as a full-stack, I contributed to the development of a hiking trip app using Angular and Flask, with a focus on Python for the back-end. After completing the project, I decided to shift my focus more towards front-end development, which has been my primary focus for the past two years. I have primarily worked as a Vue front-end developer, but I am also familiar with React, which is my personal favorite and the one I use in all of my pet projects. As of now i feel pretty comfortable with front-end part of development, so i shifted my focus to full-stack development, and my next goal is to delve into neural networks."
+const about = "My name is Aleksandr, I live in Kyiv. I am a self-taught programmer with a passion for web development. My journey began with a six months internship as a full-stack developer. During my  time as a full-stack, I contributed to the development of a hiking trip app using Angular and Flask, with a focus on Python for the back-end. After completing the project, I decided to shift my focus more towards front-end development, which has been my primary focus for the past two years. I have primarily worked as a Vue front-end developer, but I am also familiar with React, which is my personal favorite and the one I use in all of my pet projects. Neural networks is my new passion, so I spend my free time mostly on this topic."
 
 const experiences = [
   {

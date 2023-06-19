@@ -88,3 +88,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.p-anchor {
+  padding-top: 10px;
+}
