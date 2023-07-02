@@ -26,7 +26,7 @@ const Link = ({ img, text, url, target, download }) => {
 const Footer = () => {
   return (
     <footer className={`${styles.paddingX} w-full flex items-center py-5 bg-primary`}>
-      <p className="p-anchor" id="contact">&nbsp;</p>
+      <p className="p-anchor" id="contacts">&nbsp;</p>
       <div className='w-full flex flex-wrap gap-5 justify-around items-center max-w-7xl mx-auto'>
         <div className="flex flex-col gap-2">
           <h4 className="text-[18px] font-bold">Contacts:</h4>

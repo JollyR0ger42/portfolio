@@ -38,8 +38,8 @@ export const navLinks = [
     title: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "contacts",
+    title: "Contacts",
   },
 ];
 
@@ -94,7 +94,7 @@ const technologies = [
   },
 ];
 
-const about = "My name is Aleksandr, I live in Kyiv. I am a self-taught programmer with a passion for web development. My journey began with a six months internship as a full-stack developer. During my  time as a full-stack, I contributed to the development of a hiking trip app using Angular and Flask, with a focus on Python for the back-end. After completing the project, I decided to shift my focus more towards front-end development, which has been my primary focus for the past two years. I have primarily worked as a Vue front-end developer, but I am also familiar with React, which is my personal favorite and the one I use in all of my pet projects. Neural networks is my new passion, so I spend my free time mostly on this topic."
+const about = "My name is Aleksandr, and I live in Kyiv. I am a self-taught frontend developer. After I obtained my M.Sc. in Electrical Engineering from Igor Sikorsky KPI, I freelanced for 3 years as a 3D artist. My IT career began at SoftServe, where I worked as a fullstack intern. Currently, I have 2.5 years of experience as a web developer. I primarily work with Vue.js for the frontend and Node.js for the backend. I always enjoy learning new technologies, and if there's something I don't know, I can learn it within a week. My tech stack:"
 
 const experiences = [
   {
