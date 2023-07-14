@@ -3,7 +3,6 @@ import { about } from "../constants";
 import { MotionWrapper } from "../hoc";
 
 import { motion } from "framer-motion";
-import Tech from './Tech';
 import SideInitial from "./SideInitial";
 
 export const textVariant = (delay) => {
@@ -39,7 +38,7 @@ const About = () => {
             animate={textVariant().show}
             className={`${styles.heroHeadText} text-white`}
           >
-            <span className='text-[#915EFF]'>Hi</span>
+            <span className='text-[#915EFF]'>Summary</span>
           </motion.div>
           <motion.p
             className={`${styles.heroSubText} mt-2 text-white-100`}
@@ -49,9 +48,6 @@ const About = () => {
             {about}
           </motion.p>
         </div>
-      </div>
-      <div className={`mt-10 ${styles.paddingX}`}>
-        <Tech />
       </div>
     </section>
   );

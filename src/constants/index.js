@@ -1,20 +1,8 @@
 import {
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
   diia,
   softserve,
   brighta,
   codecare,
-  hzf,
   gol,
   cryptocounter,
   landing,
@@ -24,7 +12,6 @@ import {
   linkedin,
   telegram,
   downloadPdf,
-  vue,
   asteroids,
 } from "../assets";
 
@@ -43,58 +30,7 @@ export const navLinks = [
   },
 ];
 
-const technologies = [
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "Vue JS",
-    icon: vue,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-];
-
-const about = "My name is Aleksandr, and I live in Kyiv. I am a self-taught frontend developer. After I obtained my M.Sc. in Electrical Engineering from Igor Sikorsky KPI, I freelanced for 3 years as a 3D artist. My IT career began at SoftServe, where I worked as a fullstack intern. Currently, I have 2.5 years of experience as a web developer. I primarily work with Vue.js for the frontend and Node.js for the backend. I always enjoy learning new technologies, and if there's something I don't know, I can learn it within a week. My tech stack:"
+const about = "A self-taught Frontend developer with 3 years of experience, proficient in HTML, CSS, JavaScript, and TypeScript. Adaptable and versatile, with a fast-learning ability, capable of effectively collaborating within diverse teams."
 
 const experiences = [
   {
@@ -143,20 +79,6 @@ const experiences = [
     date: "November 2021 - August 2022",
     points: [
       "Developing front-end from Figma design using Vue.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Back-end to front-end integration.",
-      "Refactoring legacy components.",
-    ],
-  },
-  {
-    title: "Middle Game Developer",
-    company_name: "HZF",
-    icon: hzf,
-    iconBg: "#000",
-    date: "September 2022 - November 2022",
-    points: [
-      "Collaborating with designers to reskin casino app with Phaser.",
-      "Developing new features for casino app.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Back-end to front-end integration.",
       "Refactoring legacy components.",
@@ -271,4 +193,4 @@ const links = [
   },
 ]
 
-export { technologies, experiences, projects, about, contacts, links };
+export { experiences, projects, about, contacts, links };
