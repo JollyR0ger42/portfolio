@@ -32,6 +32,8 @@ export const navLinks = [
 
 const about = "A self-taught Frontend developer with 3 years of experience, proficient in HTML, CSS, JavaScript, and TypeScript. Adaptable and versatile, with a fast-learning ability, capable of effectively collaborating within diverse teams."
 
+const education = "Education: Igor Sikorsky KPI — M. Sc. in Electrical Engineering."
+
 const experiences = [
   {
     title: "Intern Full-stack Developer",
@@ -193,4 +195,4 @@ const links = [
   },
 ]
 
-export { experiences, projects, about, contacts, links };
+export { experiences, projects, about, contacts, links, education };

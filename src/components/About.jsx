@@ -1,5 +1,5 @@
 import { styles } from "../styles";
-import { about } from "../constants";
+import { about, education } from "../constants";
 import { MotionWrapper } from "../hoc";
 
 import { motion } from "framer-motion";
@@ -46,6 +46,9 @@ const About = () => {
             animate={textVariant(0.1).show}
           >
             {about}
+            <br/>
+            <br/>
+            {education}
           </motion.p>
         </div>
       </div>
