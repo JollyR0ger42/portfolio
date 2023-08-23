@@ -5,7 +5,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import call from "./call.svg";
 import mail from "./mail.svg";
-import linkedin from "./linkedin.svg";
 import telegram from "./telegram.svg";
 import downloadPdf from "./downloadPdf.svg";
 
@@ -14,7 +13,7 @@ import softserve from './company/softserve.avif';
 import codecare from './company/codecare.avif';
 import diia from './company/diia.avif';
 
-import gol from "./gol.avif";
+import contactus from "./contactus.avif";
 import cryptocounter from "./cryptocounter.avif";
 import landing from "./landing.avif";
 import asteroids from './asteroids.avif';
@@ -28,13 +27,12 @@ export {
   brighta,
   codecare,
   diia,
-  gol,
+  contactus,
   web,
   cryptocounter,
   landing,
   call,
   mail,
-  linkedin,
   telegram,
   downloadPdf,
   asteroids,

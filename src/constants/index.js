@@ -3,13 +3,12 @@ import {
   softserve,
   brighta,
   codecare,
-  gol,
+  contactus,
   cryptocounter,
   landing,
   call,
   mail,
   github,
-  linkedin,
   telegram,
   downloadPdf,
   asteroids,
@@ -90,18 +89,18 @@ const experiences = [
 
 const projects = [
   {
-    name: "Game of Life",
+    name: "Contact Us",
     description:
-      "A cellular automaton. It is a zero-player game - its evolution is determined by its initial state, requiring no further input.",
+      "Mobile/Desktop responsive Contact us page on Nextjs",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       }
     ],
-    image: gol,
-    source_code_link: "https://github.com/JollyR0ger42/Game-Of-Life",
-    demo_link: "https://kolontai-cv.up.railway.app/gol/",
+    image: contactus,
+    source_code_link: "https://github.com/JollyR0ger42/react-contactus",
+    demo_link: "https://kolontai-cv.up.railway.app/contactus/",
   },
   {
     name: "Crypto counter",
@@ -179,10 +178,6 @@ const links = [
     url: "https://github.com/JollyR0ger42",
     img: github,
     text: "Github",
-  }, {
-    url: "https://www.linkedin.com/in/aleksandr-kolontai-a7437718b/",
-    img: linkedin,
-    text: "Linkedin",
   }, {
     url: "https://t.me/JollyR0ger42",
     img: telegram,
