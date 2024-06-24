@@ -100,7 +100,7 @@ const projects = [
     ],
     image: contactus,
     source_code_link: "https://github.com/JollyR0ger42/react-contactus",
-    demo_link: "https://kolontai-cv.up.railway.app/contactus/",
+    demo_link: "/contactus",
   },
   {
     name: "Crypto counter",
@@ -114,7 +114,7 @@ const projects = [
     ],
     image: cryptocounter,
     source_code_link: "https://github.com/JollyR0ger42/crypto-counter",
-    demo_link: "https://kolontai-cv.up.railway.app/crypto/",
+    demo_link: "/crypto",
   },
   {
     name: "Asteroids",
@@ -132,7 +132,7 @@ const projects = [
     ],
     image: asteroids,
     source_code_link: "https://github.com/JollyR0ger42/Asteroids-1979",
-    demo_link: "https://kolontai-cv.up.railway.app/asteroids/",
+    demo_link: "/asteroids",
   },
   {
     name: "Landing page",
@@ -154,7 +154,7 @@ const projects = [
     ],
     image: landing,
     source_code_link: "https://github.com/JollyR0ger42/web_page_02",
-    demo_link: "https://kolontai-cv.up.railway.app/web-page-2",
+    demo_link: "/web-page-2",
   },
 ];
 
@@ -183,7 +183,7 @@ const links = [
     img: telegram,
     text: "Telegram",
   }, {
-    url: "https://kolontai-cv.up.railway.app/CV_Kolontai_A.pdf",
+    url: "/CV_Kolontai_A.pdf",
     img: downloadPdf,
     text: "Download CV as pdf",
     download: true,
