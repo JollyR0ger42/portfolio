@@ -12,6 +12,7 @@ import {
   telegram,
   downloadPdf,
   asteroids,
+  freelance
 } from "../assets";
 
 export const navLinks = [
@@ -83,6 +84,17 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Back-end to front-end integration.",
       "Refactoring legacy components.",
+    ],
+  },
+  {
+    title: "Freelance",
+    company_name: "",
+    icon: freelance,
+    iconBg: "#000",
+    date: "September 2022 - December 2022",
+    points: [
+      "2 month - reskin for internet casino using Phaser",
+      "2 month - bug fixing in Telephony bot UI using React",
     ],
   },
 ];

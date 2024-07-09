@@ -12,6 +12,7 @@ import brighta from "./company/brighta.avif";
 import softserve from './company/softserve.avif';
 import codecare from './company/codecare.avif';
 import diia from './company/diia.avif';
+import freelance from './company/freelance.avif';
 
 import contactus from "./contactus.avif";
 import cryptocounter from "./cryptocounter.avif";
@@ -36,4 +37,5 @@ export {
   telegram,
   downloadPdf,
   asteroids,
+  freelance,
 };
