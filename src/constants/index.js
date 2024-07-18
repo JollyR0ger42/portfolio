@@ -30,7 +30,7 @@ export const navLinks = [
   },
 ];
 
-const about = "A self-taught Frontend developer with 3 years of experience, proficient in HTML, CSS, JavaScript, and TypeScript. Adaptable and versatile, with a fast-learning ability, capable of effectively collaborating within diverse teams."
+const about = "A self-taught Fullstack developer with 3 years of experience, proficient in HTML, CSS, JavaScript, and TypeScript. Adaptable and versatile, with a fast-learning ability, capable of effectively collaborating within diverse teams."
 
 const education = "Education: Igor Sikorsky KPI — M. Sc. in Electrical Engineering."
 
